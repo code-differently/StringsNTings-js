@@ -24,8 +24,7 @@ class StringsAndTings {
             result[length - i - 1] = result[i];
             result[i] = rightLetter;
         }
-        result = result.join("");
-        return result.toString();
+        return result.join("").toString();
     }
 
     reverseWords(str) {
