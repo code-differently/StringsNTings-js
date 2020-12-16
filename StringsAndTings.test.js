@@ -8,7 +8,7 @@ test("camelCaseTest", () => {
     let input = "she sells sea shells";
     let expected = "She Sells Sea Shells";
 
-    let actual = stringsAndTings.camelCase(15);
+    let actual = stringsAndTings.camelCase(input);
 
     expect(actual).toEqual(expected);
 });
