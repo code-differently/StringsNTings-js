@@ -52,7 +52,15 @@ class StringsAndTings {
 
     // @return string with identical characters, each with opposite casing
     invertCasing(str) {
-        return null;
+        let result = "";
+        for (let c of str) {
+            if (c == c.toUpperCase()) {
+                result += c.toLowerCase();
+            } else {
+                result += c.toUpperCase();
+            }
+        }
+        return result;
     }
 }
 
