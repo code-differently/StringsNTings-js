@@ -19,7 +19,7 @@ test("reverseTest", () => {
     let input = "she sells sea shells";
     let expected = "sllehs aes slles ehs";
 
-    let actual = stringsAndTings.camelCase(15);
+    let actual = stringsAndTings.reverseString(input);
 
     expect(actual).toEqual(expected);
 });
@@ -30,7 +30,7 @@ test("reverseWordsTest", () => {
     let input = "she sells sea shells";
     let expected = "ehs slles aes sllehs";
 
-    let actual = stringsAndTings.camelCase(15);
+    let actual = stringsAndTings.camelCase(input);
 
     expect(actual).toEqual(expected);
 });
@@ -41,7 +41,7 @@ test("reverseThenCamelCaseTest", () => {
     let input = "she sells sea shells";
     let expected = "Sllehs Aes Slles Ehs";
 
-    let actual = stringsAndTings.camelCase(15);
+    let actual = stringsAndTings.reverseThenCamelCase(input);
 
     expect(actual).toEqual(expected);
 });
@@ -52,7 +52,7 @@ test("removeFirstAndLastCharacterTest", () => {
     let input = "she sells sea shells";
     let expected = "he sells sea shell";
 
-    let actual = stringsAndTings.camelCase(15);
+    let actual = stringsAndTings.removeFirstAndLastCharacter(input);
 
     expect(actual).toEqual(expected);
 });
@@ -64,7 +64,7 @@ test("invertCasingTest1", () => {
     let input = "shE sells SEA sHeLlS";
     let expected = "SHe SELLS sea ShElLs";
 
-    let actual = stringsAndTings.camelCase(15);
+    let actual = stringsAndTings.invertCasing(input);
 
     expect(actual).toEqual(expected);
 });

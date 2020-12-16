@@ -14,7 +14,11 @@ class StringsAndTings {
     }
 
     //@return string with identical contents, with each word individually in reverse order
-    reverseString(str) {
+    reverseString() {
+        return null;
+    }
+
+    reverseWords(str) {
         return null;
     }
 
