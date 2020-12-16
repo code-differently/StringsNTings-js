@@ -30,7 +30,7 @@ test("reverseWordsTest", () => {
     let input = "she sells sea shells";
     let expected = "ehs slles aes sllehs";
 
-    let actual = stringsAndTings.camelCase(input);
+    let actual = stringsAndTings.reverseWords(input);
 
     expect(actual).toEqual(expected);
 });

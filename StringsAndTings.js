@@ -13,9 +13,19 @@ class StringsAndTings {
         return result;
     }
 
-    //@return string with identical contents, with each word individually in reverse order
-    reverseString() {
-        return null;
+    reverseString(str) {
+        // Strings in js are immutable. Need to split it into a new array to modify it.
+        let result = str.split("");
+        let length = result.length;
+        // You would think you'd need to do -1 here, but that does not work. This method seems to work for even and odd lengthed inputs.
+        const halfIndex = Math.floor(length / 2);
+        for (let i = 0; i < halfIndex; i++) {
+            let rightLetter = result[length - i - 1];
+            result[length - i - 1] = result[i];
+            result[i] = rightLetter;
+        }
+        result = result.join("");
+        return result.toString();
     }
 
     reverseWords(str) {
