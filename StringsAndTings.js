@@ -29,8 +29,8 @@ class StringsAndTings {
     }
 
     reverseWords(str) {
-        let words = str.split(" ");
         let result = "";
+        let words = str.split(" ");
         for (let word of words) {
             word = this.reverseString(word);
             result += `${word} `;
@@ -40,12 +40,14 @@ class StringsAndTings {
 
     // @return string with identical contents, in reverse order, with first character capitalized
     reverseThenCamelCase(str) {
-        return null;
+        const reversedStr = this.reverseString(str);
+        return this.camelCase(reversedStr);
     }
 
     // @return string with identical contents excluding first and last character
     removeFirstAndLastCharacter(str) {
-        return null;
+        // Use str.length - 1 because it returns the value *up to* that index, not *at* that index. So return value up to the very last index.
+        return str.substring(1, str.length - 1)
     }
 
     // @return string with identical characters, each with opposite casing
