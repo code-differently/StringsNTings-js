@@ -65,25 +65,44 @@ class StringsAndTings {
         for (let i = str.length-1; i >= 0; i--){
             rString += str[i];
         }
-        //rString = rString.split();
+        //rString = rString.split(" ");
         //rString = rString..toUpperCase() + rString.substring(1);
 
-        rString = rString.toUpperCase(rString.length-1);
-        
+        rString = rString.toUpperCase();
+       // string[i] = string[i][0].toUpperCase() + string[i].substring(1);
+
     
         return rString;
     }
 
 
-    // // @return string with identical contents excluding first and last character
-    // removeFirstAndLastCharacter(str){
-    //     return null;
-    // }
 
-    // // @return string with identical characters, each with opposite casing
-    // invertCasing(str){
-    //     return null;
-    // }
+ 
+    // @return string with identical contents excluding first and last character
+    removeFirstAndLastCharacter(str){
+        let newString = "";
+        for (let i=1; i<str.length-1; i++){
+            newString += str[i];
+        }
+        return newString;
+    }
+
+    // @return string with identical characters, each with opposite casing
+    invertCasing(str){
+        let charCase = [];
+        let inverseString = "";
+        for(let i=0; i<=str.length-1;i++){
+            charCase += str[i];
+        
+       // charCase = charCase.split("");
+        if(charCase[i] === charCase[i].toUpperCase()){
+            inverseString += charCase[i].toLowerCase();
+         }else {inverseString += charCase[i].toUpperCase();
+         }    
+       
+    }
+        return inverseString;
+    }
 }
 
 module.exports = StringsAndTings;

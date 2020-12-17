@@ -46,26 +46,26 @@ test("reverseThenCamelCaseTest", () => {
     expect(actual).toEqual(expected);
 });
 
-// test("removeFirstAndLastCharacterTest", () => {
+test("removeFirstAndLastCharacterTest", () => {
 
-//     let stringsAndTings = new StringsAndTings();
-//     let input = "she sells sea shells";
-//     let expected = "he sells sea shell";
+    let stringsAndTings = new StringsAndTings();
+    let input = "she sells sea shells";
+    let expected = "he sells sea shell";
 
-//     let actual = stringsAndTings.camelCase(15);
+    let actual = stringsAndTings.removeFirstAndLastCharacter(input);
 
-//     expect(actual).toEqual(expected);
-// });
+    expect(actual).toEqual(expected);
+});
 
 
-// test("invertCasingTest1", () => {
+test("invertCasingTest1", () => {
 
-//     let stringsAndTings = new StringsAndTings();
-//     let input = "shE sells SEA sHeLlS";
-//     let expected = "SHe SELLS sea ShElLs";
+    let stringsAndTings = new StringsAndTings();
+    let input = "shE sells SEA sHeLlS";
+    let expected = "SHe SELLS sea ShElLs";
 
-//     let actual = stringsAndTings.camelCase(15);
+    let actual = stringsAndTings.invertCasing(input);
 
-//     expect(actual).toEqual(expected);
-// });
+    expect(actual).toEqual(expected);
+});
 
