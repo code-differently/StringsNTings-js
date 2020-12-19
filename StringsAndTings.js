@@ -55,12 +55,9 @@ class StringsAndTings {
         let rString = this.reverseString(str);
         let reverseString = rString;
         reverseString = this.camelCase(rString);
-
      
         return reverseString;
     }
-
-
  
     // @return string with identical contents excluding first and last character
     removeFirstAndLastCharacter(str){
