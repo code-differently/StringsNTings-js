@@ -49,32 +49,16 @@ class StringsAndTings {
     }
 
 
-     // @return string with identical contents, in reverse order, with first character capitalized
-    // reverseThenCamelCase(str){
-    //     let rCamelString = str.split(" ");
-    //     for (let i = rCamelString.length-1; i >= 0; i--){
-    //       //  rCamelString[i] =  rCamelString[i][rCamelString.length - 1].toUpperCase() + rCamelString[i].substring(1);
-
-    //     }
-    //     return rCamelString.join(" ");
-    // }
+//@return string with identical contents, in reverse order, with first character capitalized
 
     reverseThenCamelCase(str){
-        let rString = "";
-        let whiteSpace  = str.indexOf (" ");
-        for (let i = str.length-1; i >= 0; i--){
-            rString += str[i];
-        }
-        //rString = rString.split(" ");
-        //rString = rString..toUpperCase() + rString.substring(1);
+        let rString = this.reverseString(str);
+        let reverseString = rString;
+        reverseString = this.camelCase(rString);
 
-        rString = rString.toUpperCase();
-       // string[i] = string[i][0].toUpperCase() + string[i].substring(1);
-
-    
-        return rString;
+     
+        return reverseString;
     }
-
 
 
  
@@ -93,13 +77,10 @@ class StringsAndTings {
         let inverseString = "";
         for(let i=0; i<=str.length-1;i++){
             charCase += str[i];
-        
-       // charCase = charCase.split("");
         if(charCase[i] === charCase[i].toUpperCase()){
             inverseString += charCase[i].toLowerCase();
          }else {inverseString += charCase[i].toUpperCase();
          }    
-       
     }
         return inverseString;
     }
